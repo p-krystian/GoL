@@ -1,38 +1,54 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  background: #555;
 }
-
-.App-header {
-  background-color: #282c34;
+.header{
+  color: white;
+  text-transform: uppercase;
+  font-size: 60px;
+  margin: 30px;
+  font-family: 'Staatliches', cursive;
+  line-height: 1;
+}
+.main{
+  min-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.board{
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  gap: 1px;
+  width: 700px;
+  height: 500px;
+  border: 2px solid #333;
+  overflow: auto;
 }
-
-.App-link {
-  color: #61dafb;
+.board .row{
+  display: flex;
+  gap: 1px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.board.running .cell{
+  cursor: default;
+  pointer-events: none;
+}
+.cell{
+  width: 25px;
+  height: 25px;
+  border: 1px solid #333;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.cell.alive{
+  background: #000;
 }
