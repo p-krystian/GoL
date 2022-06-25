@@ -1,0 +1,19 @@
+.board{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+  width: 700px;
+  height: 500px;
+  border: 2px solid #333;
+  overflow: auto;
+}
+.board .row{
+  display: flex;
+  gap: 1px;
+}
+.board.running .cell{
+  cursor: default;
+  pointer-events: none;
+}

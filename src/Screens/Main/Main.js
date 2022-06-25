@@ -1,3 +1,4 @@
+import './Main.css'
 import Header from '../../Components/Header/Header'
 import Board from '../../Components/Board/Board'
 import Cell from '../../Components/Cell/Cell'
@@ -25,7 +26,6 @@ function Main(){
   }
 
   useEffect(() => {
-    console.log(runningCycle)
     if (running){
       runningCycle = setInterval(() => {
         setTable(toggleLife(cycle(table), table))

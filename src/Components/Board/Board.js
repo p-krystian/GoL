@@ -1,4 +1,4 @@
-// import Cell from "../Cell/Cell"
+import './Board.css'
 
 function Board(props){
   const { children, running} = props

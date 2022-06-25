@@ -1,8 +1,4 @@
-
-// function toggleLife(cell){
-//   cell.classList.toggle('dead')
-//   cell.classList.toggle('alive')
-// }
+import './Cell.css'
 
 function Cell(props){
   const { alive, click} = props
