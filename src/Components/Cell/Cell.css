@@ -3,9 +3,9 @@
   height: 24px;
   border-radius: 3px;
   cursor: pointer;
-  background: #fff;
+  background: var(--foreground);
   margin: 1px;
 }
 .cell.alive{
-  background: #000;
+  background: var(--contrast);
 }

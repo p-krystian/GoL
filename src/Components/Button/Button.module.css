@@ -1,22 +1,22 @@
 .btn{
-  background: #fff;
+  background: var(--foreground);
   text-transform: uppercase;
   text-decoration: none;
-  color: #000;
+  color: var(--contrast);
   text-align: center;
   font-size: 30px;
   font-family: 'Open Sans', sans-serif;
-  border: 2px solid #000;
+  border: 2px solid var(--contrast);
   padding: 6px;
   min-width: 180px;
   cursor: pointer;
   text-shadow:
-    0 0 1px #ffff00ee,
-    0 0 0 #ff00ffcc;
+    0 0 1px var(--rgb-first),
+    0 0 0 var(--rgb-second);
   transition: text-shadow 0.15s ease-in-out;
 }
 .btn:hover{
   text-shadow:
-    -1px 1px 1px #ffff00ee,
-    -2px 2px 0 #ff00ffcc;
+    -1px 1px 1px var(--rgb-first),
+    -2px 2px 0 var(--rgb-second);
 }

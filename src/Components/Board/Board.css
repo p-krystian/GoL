@@ -6,7 +6,8 @@
   min-width: 600px;
   height: calc(100vh - 220px);
   min-height: 200px;
-  border: 2px solid #333;
+  border: 2px solid var(--contrast);
+  background: var(--background);
   overflow: scroll;
 }
 .board .row{

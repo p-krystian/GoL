@@ -5,6 +5,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root{
+  --background: #eceff1;
+  --foreground: #ffffff;
+  --contrast: #000000;
+  --rgb-first: #ffff00ee;
+  --rgb-second: #ff00ffcc;
+}
 body{
-  background: #eceff1;
+  background: var(--background) url('./Assets/bg.png');
 }
