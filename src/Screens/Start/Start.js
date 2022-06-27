@@ -9,7 +9,7 @@ function Start(props){
       <Header vertical={ true } />
       <div className={ styles.buttons }>
         <Button click={ () => set('main') }>Start</Button>
-        <Button>About</Button>
+        <Button click={ () => set('about') }>About</Button>
         <Button click={ () => window.history.back() }>Exit</Button>
       </div>
     </div>

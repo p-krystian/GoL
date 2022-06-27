@@ -1,8 +1,12 @@
 import './App.css'
 import Mark from './Components/Mark/Mark'
+import About from './Components/About/About'
 import Main from './Screens/Main/Main'
 import Start from './Screens/Start/Start'
 import { useState } from 'react'
+
+const __developer__ = 'Krystian Piątek'
+const __version__ = 0.80
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('start')
@@ -10,7 +14,16 @@ function App() {
     currentScreen === 'main' ? (
       <Main back={ () => setCurrentScreen('start') } />
     ) : (
-      <Start set={ setCurrentScreen } />
+      <>
+        <Start set={ setCurrentScreen } />
+        { currentScreen === 'about' ? (
+          <About
+            ver={ __version__ }
+            developer={ __developer__ }
+            back={ () => setCurrentScreen('start') }
+          />
+        ) : (null) }
+      </>
     )}
     <Mark>
       by <a href="http://krystian.zalana.eu" target="_blank" rel="noreferrer">

@@ -1,0 +1,21 @@
+.wrapper{
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.window{
+  border: 3px solid var(--contrast);
+  padding: 10px;
+  background: var(--background);
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  font-size: 36px;
+  cursor: default;
+}
