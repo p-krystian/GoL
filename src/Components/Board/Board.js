@@ -1,9 +1,12 @@
 import './Board.css'
 
 function Board(props){
-  const { children, running} = props
+  const { children, running, hook } = props
   return (
-    <div className={`board ${running ? 'running' : ''}`}>
+    <div
+      className={`board ${running ? 'running' : ''}`}
+      ref={ hook }
+    >
       { children }
     </div>
   )

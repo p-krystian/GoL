@@ -1,7 +1,9 @@
+import styles from './Button.module.css'
+
 function Button(props){
   const { children, click } = props
   return (
-    <button onClick={ click }>
+    <button className={ styles.btn } onClick={ click }>
       { children }
     </button>
   )

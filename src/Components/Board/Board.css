@@ -1,17 +1,16 @@
 .board{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1px;
-  width: 700px;
-  height: 500px;
+  width: 80%;
+  min-width: 600px;
+  height: calc(100vh - 220px);
+  min-height: 200px;
   border: 2px solid #333;
-  overflow: auto;
+  overflow: scroll;
 }
 .board .row{
   display: flex;
-  gap: 1px;
 }
 .board.running .cell{
   cursor: default;

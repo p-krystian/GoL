@@ -1,9 +1,10 @@
 .cell{
-  width: 25px;
-  height: 25px;
-  border: 1px solid #333;
+  width: 24px;
+  height: 24px;
   border-radius: 3px;
   cursor: pointer;
+  background: #fff;
+  margin: 1px;
 }
 .cell.alive{
   background: #000;

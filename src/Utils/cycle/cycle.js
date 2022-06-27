@@ -7,7 +7,7 @@ function cycle(table){
       const cell = table[+y][+x]
       const aN = aliveNeighbors(table, +y, +x)
 
-      if (!cell && aN == 3)
+      if (!cell && aN === 3)
         toUpdate.push({y, x})
       else if (cell && (aN < 2 || aN > 3))
         toUpdate.push({y, x})

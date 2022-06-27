@@ -2,14 +2,15 @@ import styles from './Start.module.css'
 import Header from '../../Components/Header/Header'
 import Button from '../../Components/Button/Button'
 
-function Start(){
+function Start(props){
+  const { set } = props
   return (
     <div className={ styles.start }>
       <Header vertical={ true } />
       <div className={ styles.buttons }>
-        <Button>START</Button>
-        <Button>ABOUT</Button>
-        <Button>EXIT</Button>
+        <Button click={ () => set('main') }>Start</Button>
+        <Button>About</Button>
+        <Button click={ () => window.history.back() }>Exit</Button>
       </div>
     </div>
   )

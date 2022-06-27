@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600;800&display=swap');
 
 *{
   margin: 0;
@@ -6,5 +6,5 @@
   box-sizing: border-box;
 }
 body{
-  background: #555;
+  background: #eceff1;
 }

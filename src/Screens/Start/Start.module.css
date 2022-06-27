@@ -8,7 +8,7 @@
   padding: 30px;
 }
 .buttons{
-  min-height: calc(100vh - 240px);
+  min-height: calc(100vh - 300px);
   display: flex;
   flex-direction: column;
   justify-content: center;

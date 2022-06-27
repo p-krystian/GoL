@@ -3,7 +3,7 @@ function Settings(props){
   const {current, update} = props
 
   function updateSize(axis, value){
-    if (axis == 'w')
+    if (axis === 'w')
       update.size({
         w: value,
         h: current.size.h

@@ -1,4 +1,4 @@
-export default (table, y, x) => [
+const aliveNeighbors = (table, y, x) => [
   table[y-1]?.at(x-1),
   table[y-1]?.at(x),
   table[y-1]?.at(x+1),
@@ -8,3 +8,5 @@ export default (table, y, x) => [
   table[y+1]?.at(x),
   table[y+1]?.at(x+1)
 ].filter(aliveNeighbor => aliveNeighbor).length
+
+export default aliveNeighbors
