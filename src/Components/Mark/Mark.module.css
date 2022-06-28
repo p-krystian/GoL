@@ -14,3 +14,14 @@
 .mark a:hover{
   text-decoration: underline;
 }
+@media only screen and (max-width: 600px){
+  .mark{
+    position: static;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2vmin;
+  }
+  .mark a{
+    text-decoration: underline;
+  }
+}

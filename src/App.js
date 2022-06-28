@@ -6,7 +6,7 @@ import Start from './Screens/Start/Start'
 import { useState } from 'react'
 
 const __developer__ = 'Krystian Piątek'
-const __version__ = 0.80
+const __version__ = '1.00'
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('start')

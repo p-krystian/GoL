@@ -17,3 +17,11 @@
   width: max-content;
   margin: auto;
 }
+@media only screen and (max-width: 600px){
+  .main{
+    padding: 2vmin;
+  }
+  .buttons button:nth-child(2){
+    order: -1;
+  }
+}
