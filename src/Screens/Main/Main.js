@@ -49,6 +49,8 @@ function Main(props){
     const filled = filledBoard()
     defaultSize.w = filled.w
     defaultSize.h = filled.h
+    setSize(defaultSize)
+    setTable(cleanTable(defaultSize))
   }, [])
 
   return (
