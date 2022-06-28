@@ -18,24 +18,36 @@ function Settings(props){
 
   return (
     <div className={ styles.settings }>
-      Width:
-      <input
-        type="number"
-        value={ current.size.w }
-        onChange={ e => updateSize('w', +e.target.value) }
-      />
-      Height:
-      <input
-        type="number"
-        value={ current.size.h }
-        onChange={ e => updateSize('h', +e.target.value) }
-      />
-      Delay:
-      <input
-        type="number"
-        value={ current.delay }
-        onChange={ e => update.delay(+e.target.value) }
-      />
+        <span>Width:</span>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          value={ current.size.w }
+          onChange={ e => updateSize('w', +e.target.value) }
+        />
+        <span>cells</span>
+
+        <span>Height:</span>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          value={ current.size.h }
+          onChange={ e => updateSize('h', +e.target.value) }
+        />
+        <span>cells</span>
+
+        <span>Delay:</span>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          value={ current.delay }
+          onChange={ e => update.delay(+e.target.value) }
+        />
+        <span>ms</span>
+
     </div>
   )
 }

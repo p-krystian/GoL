@@ -1,3 +1,25 @@
 .settings{
-  display: block;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 16px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 28px;
+  align-items: center;
+}
+.settings input{
+  background: var(--foreground);
+  color: var(--contrast);
+  text-align: center;
+  font-size: 24px;
+  font-family: 'Open Sans', sans-serif;
+  border: 2px solid var(--contrast);
+  padding: 4px;
+  width: 120px;
+  cursor: pointer;
+}
+.settings input:focus{
+  outline: none;
+  box-shadow:
+    -2px 2px 0 0 var(--rgb-first),
+    -4px 4px 0 0 var(--rgb-second);
 }

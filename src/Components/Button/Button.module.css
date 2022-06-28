@@ -16,6 +16,7 @@
   transition: text-shadow 0.15s ease-in-out;
 }
 .btn:hover{
+  outline: none;
   text-shadow:
     -1px 1px 1px var(--rgb-first),
     -2px 2px 0 var(--rgb-second);

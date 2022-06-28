@@ -8,7 +8,7 @@
   min-height: 200px;
   border: 2px solid var(--contrast);
   background: var(--background);
-  overflow: scroll;
+  overflow: auto;
 }
 .board .row{
   display: flex;
