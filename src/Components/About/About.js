@@ -18,7 +18,7 @@ function About(props){
         <center><p>Game of Life</p></center>
         <br />
         <p>It is an implement of cellular</p>
-        <p>automation by Horton Conway.</p>
+        <p>automaton by Horton Conway.</p>
         <p>Select live cells and click</p>
         <p>START to start life simulation.</p>
         <br />
