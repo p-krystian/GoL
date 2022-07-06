@@ -36,7 +36,12 @@ function Main(props){
       return
     }
     runningCycle = setInterval(() => (
-      setTable(toggleLife(cycle(table), table))
+      setTable(
+        toggleLife(
+          cycle(table, () => setRunning(false)),
+          table
+        )
+      )
     ), delay)
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [running])
