@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Settings.module.css'
 
 function Settings(props){
@@ -51,4 +52,9 @@ function Settings(props){
     </div>
   )
 }
+Settings.propTypes = {
+  current: PropTypes.object.isRequired,
+  update: PropTypes.objectOf(PropTypes.func).isRequired
+}
+
 export default Settings

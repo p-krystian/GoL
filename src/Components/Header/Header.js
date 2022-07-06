@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Header.module.css'
 
 function Header(props){
@@ -17,4 +18,9 @@ function Header(props){
     }</div>
   )
 }
+Header.propTypes = {
+  vertical: PropTypes.bool,
+  click: PropTypes.func
+}
+
 export default Header

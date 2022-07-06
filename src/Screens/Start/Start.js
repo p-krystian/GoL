@@ -1,9 +1,9 @@
+import PropTypes from 'prop-types'
 import styles from './Start.module.css'
 import Header from '../../Components/Header/Header'
 import Button from '../../Components/Button/Button'
 
-function Start(props){
-  const { set } = props
+function Start({ set }){
   return (
     <div className={ styles.start }>
       <Header vertical={ true } />
@@ -15,4 +15,8 @@ function Start(props){
     </div>
   )
 }
+Start.propTypes = {
+  set: PropTypes.func
+}
+
 export default Start

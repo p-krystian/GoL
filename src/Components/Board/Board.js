@@ -1,4 +1,5 @@
 import './Board.css'
+import PropTypes from 'prop-types'
 
 function Board(props){
   const { children, running, hook } = props
@@ -10,7 +11,14 @@ function Board(props){
       { children }
     </div>
   )
-
+}
+Board.propTypes = {
+  children: PropTypes.element,
+  running: PropTypes.bool,
+  hook: PropTypes.oneOfType([
+    PropTypes.func,
+    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
+  ])
 }
 
 export default Board

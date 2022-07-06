@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Main.module.css'
 import Header from '../../Components/Header/Header'
 import Board from '../../Components/Board/Board'
@@ -13,7 +14,7 @@ const defaultDelay = 500
 const defaultSize = {w: 0, h: 0}
 let runningCycle
 
-function Main(props){
+function Main({ back }){
   const [size, setSize] = useState(defaultSize)
   const [delay, setDelay] = useState(defaultDelay)
   const [table, setTable] = useState( [[]] )
@@ -60,7 +61,7 @@ function Main(props){
 
   return (
     <div className={ styles.main }>
-      <Header click={ props.back }/>
+      <Header click={ back }/>
       <Board running={ running } hook={ board }>{
         settings ? (
           <Settings
@@ -99,4 +100,8 @@ function Main(props){
     </div>
   )
 }
+Main.propTypes = {
+  back: PropTypes.func
+}
+
 export default Main

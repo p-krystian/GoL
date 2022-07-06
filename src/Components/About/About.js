@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './About.module.css'
 import { useRef } from 'react'
 
@@ -27,4 +28,10 @@ function About(props){
     </div>
   )
 }
+About.propTypes = {
+  ver: PropTypes.string.isRequired,
+  developer: PropTypes.string.isRequired,
+  back: PropTypes.func.isRequired
+}
+
 export default About

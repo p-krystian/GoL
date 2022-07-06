@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import styles from './Button.module.css'
 
 function Button(props){
@@ -7,6 +8,10 @@ function Button(props){
       { children }
     </button>
   )
+}
+Button.propTypes = {
+  children: PropTypes.any,
+  click: PropTypes.func
 }
 
 export default Button
