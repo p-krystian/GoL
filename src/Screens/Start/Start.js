@@ -4,13 +4,14 @@ import Header from '../../Components/Header/Header'
 import Button from '../../Components/Button/Button'
 
 function Start({ set }){
+  const exit = () => (window.history.back() || window.close())
   return (
     <div className={ styles.start }>
       <Header vertical={ true } />
       <div className={ styles.buttons }>
         <Button click={ () => set('main') }>Start</Button>
         <Button click={ () => set('about') }>About</Button>
-        <Button click={ () => window.history.back() }>Exit</Button>
+        <Button click={ () => exit() }>Exit</Button>
       </div>
     </div>
   )
