@@ -11,7 +11,7 @@ import toggleLife from '../../Utils/toggleLife/toggleLife'
 import cleanTable from '../../Utils/cleanTable/cleanTable'
 
 const defaultDelay = 500
-const defaultSize = {w: 0, h: 0}
+const defaultSize = {w: 0, h: 0, s: 24}
 let runningCycle
 
 function Main({ back }){
@@ -23,8 +23,9 @@ function Main({ back }){
 
   const board = useRef(null);
   const filledBoard = () => ({
-    w: Math.round(board.current.offsetWidth / 26) - 1,
-    h: Math.round(board.current.offsetHeight / 26) - 1
+    w: Math.round(board.current.offsetWidth / (size.s+2)) - 1,
+    h: Math.round(board.current.offsetHeight / (size.s+2)) - 1,
+    s: size.s
   })
   function clearSettings(){
     setSize(defaultSize)
@@ -75,6 +76,7 @@ function Main({ back }){
                 <Cell
                   alive={ cell }
                   click={ () => setTable(toggleLife([{y, x}], table)) }
+                  size={ size.s }
                   key={ `c${y}-${x}` }
                 />
               ))

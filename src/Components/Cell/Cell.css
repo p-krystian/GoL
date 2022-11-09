@@ -1,7 +1,7 @@
 .cell{
-  width: 24px;
-  height: 24px;
-  border-radius: 3px;
+  width: var(--size, 24px);
+  height: var(--size, 24px);
+  border-radius: calc(var(--size, 24px)/8);
   cursor: pointer;
   background: var(--foreground);
   margin: 1px;

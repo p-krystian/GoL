@@ -8,17 +8,35 @@ function Settings(props){
     if (axis === 'w')
       update.size({
         w: value,
-        h: current.size.h
+        h: current.size.h,
+        s: current.size.s
+      })
+    else if (axis === 'h')
+      update.size({
+        w: current.size.w,
+        h: value,
+        s: current.size.s
       })
     else
       update.size({
         w: current.size.w,
-        h: value
+        h: current.size.h,
+        s: value
       })
   }
 
   return (
     <div className={ styles.settings }>
+        <span>Size:</span>
+        <input
+          type="number"
+          min="4"
+          step="2"
+          value={ current.size.s }
+          onChange={ e => updateSize('s', +e.target.value) }
+        />
+        <span>px</span>
+
         <span>Width:</span>
         <input
           type="number"
