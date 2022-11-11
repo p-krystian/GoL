@@ -59,6 +59,7 @@ function Main({ back }){
     setSize(defaultSize)
     setTable(cleanTable(defaultSize))
     board.current.scrollIntoView(true)
+    // eslint-disable-next-line
   }, [])
 
   return (
