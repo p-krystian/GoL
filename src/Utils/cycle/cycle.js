@@ -15,7 +15,7 @@ function cycle(table, stop){
 
       cell && aliveInCycle++
     }
-  stop && aliveInCycle === 0 && stop()
+  stop && toUpdate.length === 0 && stop()
   return toUpdate
 }
 
