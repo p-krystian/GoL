@@ -58,6 +58,7 @@ function Main({ back }){
     defaultSize.h = filled.h
     setSize(defaultSize)
     setTable(cleanTable(defaultSize))
+    board.current.scrollIntoView(true)
   }, [])
 
   return (
