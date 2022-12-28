@@ -1,10 +1,21 @@
 import PropTypes from 'prop-types'
 import styles from './About.module.css'
-import { useRef } from 'react'
+import { useRef, useEffect } from 'react'
 
 function About(props){
   const { ver, developer, back } = props
   const wrapper = useRef(null)
+
+  // eslint-disable-next-line
+  function keyExit(keyup){
+    if (['Escape', 'Backspace'].includes(keyup.key))
+      back()
+  }
+
+  useEffect(() => {
+    document.body.addEventListener('keyup', keyExit)
+    return () => document.body.removeEventListener('keyup', keyExit)
+  }, [keyExit])
 
   return (
     <div

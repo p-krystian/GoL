@@ -4,12 +4,12 @@ import './Cell.css'
 function Cell(props){
   const { alive, click, size } = props
   return(
-    <div
+    <button
       style={ {"--size": `${size}px`} }
       className={ `cell ${alive ? 'alive' : 'dead'}` }
       onClick={ click }
     >
-    </div>
+    </button>
   )
 }
 Cell.propTypes = {

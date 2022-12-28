@@ -15,9 +15,13 @@
     0 0 0 var(--rgb-second);
   transition: text-shadow 0.15s ease-in-out;
 }
-.btn:hover{
+.btn:hover,
+.btn:focus-visible{
   outline: none;
   text-shadow:
     -1px 1px 1px var(--rgb-first),
     -2px 2px 0 var(--rgb-second);
+}
+.btn:focus-visible{
+  border-color: var(--rgb-second);
 }

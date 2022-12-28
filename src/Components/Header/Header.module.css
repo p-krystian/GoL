@@ -19,11 +19,14 @@
   user-select: none;
 }
 .header:hover,
-.header:focus{
+.header:focus-visible{
   text-shadow:
     -3px 3px 1px var(--rgb-first),
     -6px 6px 0 var(--rgb-second);
 }
 .active{
   cursor: pointer;
+}
+.active:focus-visible{
+  outline: 0.02em solid var(--rgb-second);
 }

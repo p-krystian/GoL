@@ -32,6 +32,11 @@ function Main({ back }){
     setDelay(defaultDelay)
   }
 
+  function cellClick(x, y){
+    if (running) return
+    setTable(toggleLife([{y, x}], table))
+  }
+
   useEffect(() => {
     if (!running){
       runningCycle = clearInterval(runningCycle)
@@ -77,7 +82,7 @@ function Main({ back }){
               row.map((cell, x) => (
                 <Cell
                   alive={ cell }
-                  click={ () => setTable(toggleLife([{y, x}], table)) }
+                  click={ () => cellClick(x, y) }
                   size={ size.s }
                   key={ `c${y}-${x}` }
                 />
