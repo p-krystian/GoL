@@ -1,18 +1,14 @@
+@import '../../Styles/mixins';
+
 .start{
+  @include centered-flex(column);
   min-width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   min-height: 100vh;
   padding: 30px;
 }
 .buttons{
+  @include centered-flex(column);
   min-height: calc(100vh - 300px);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
 }
 @media only screen and (max-width: 600px){

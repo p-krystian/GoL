@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import {useRef, useEffect} from 'react'
 
 function Header(props){

@@ -1,13 +1,14 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
 .board{
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include centered-flex();
   width: 80%;
   min-width: 600px;
   height: calc(100vh - 220px);
   min-height: 200px;
-  border: 2px solid var(--contrast);
-  background: var(--background);
+  border: 2px solid $c-contrast;
+  background: $c-background;
   overflow: auto;
 }
 .board .row{

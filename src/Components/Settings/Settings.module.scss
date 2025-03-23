@@ -1,3 +1,5 @@
+@import '../../Styles/variables';
+
 .settings{
   display: grid;
   grid-template-columns: repeat(3, auto);
@@ -7,19 +9,19 @@
   align-items: center;
 }
 .settings input{
-  background: var(--foreground);
-  color: var(--contrast);
+  background: $c-foreground;
+  color: $c-contrast;
   text-align: center;
   font-size: 24px;
   font-family: 'Open Sans', sans-serif;
-  border: 2px solid var(--contrast);
+  border: 2px solid $c-contrast;
   padding: 4px;
   width: 120px;
-  cursor: pointer;
+  cursor: text;
 }
 .settings input:focus{
   outline: none;
   box-shadow:
-    -2px 2px 0 0 var(--rgb-first),
-    -4px 4px 0 0 var(--rgb-second);
+    -2px 2px 0 0 $c-rgb-first,
+    -4px 4px 0 0 $c-rgb-second;
 }

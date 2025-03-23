@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './Main.module.css'
+import styles from './Main.module.scss'
 import Header from '../../Components/Header/Header'
 import Board from '../../Components/Board/Board'
 import Cell from '../../Components/Cell/Cell'

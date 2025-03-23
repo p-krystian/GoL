@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import { useState } from 'react'
-import styles from './Start.module.css'
+import styles from './Start.module.scss'
 import Header from '../../Components/Header/Header'
 import Button from '../../Components/Button/Button'
 import About from '../../Components/About/About'

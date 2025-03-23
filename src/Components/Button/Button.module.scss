@@ -1,27 +1,29 @@
+@import '../../Styles/variables';
+
 .btn{
-  background: var(--foreground);
+  background: $c-foreground;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--contrast);
+  color: $c-contrast;
   text-align: center;
   font-size: 30px;
   font-family: 'Open Sans', sans-serif;
-  border: 2px solid var(--contrast);
+  border: 2px solid $c-contrast;
   padding: 6px;
   min-width: 180px;
   cursor: pointer;
   text-shadow:
-    0 0 1px var(--rgb-first),
-    0 0 0 var(--rgb-second);
+    0 0 1px $c-rgb-first,
+    0 0 0 $c-rgb-second;
   transition: text-shadow 0.15s ease-in-out;
 }
 .btn:hover,
 .btn:focus-visible{
   outline: none;
   text-shadow:
-    -1px 1px 1px var(--rgb-first),
-    -2px 2px 0 var(--rgb-second);
+    -1px 1px 1px $c-rgb-first,
+    -2px 2px 0 $c-rgb-second;
 }
 .btn:focus-visible{
-  border-color: var(--rgb-second);
+  border-color: $c-rgb-second;
 }

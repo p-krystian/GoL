@@ -1,4 +1,8 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
 .wrapper{
+  @include centered-flex();
   position: fixed;
   z-index: 5;
   left: 0;
@@ -7,15 +11,12 @@
   right: 0;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   cursor: pointer;
 }
 .window{
-  border: 3px solid var(--contrast);
+  border: 3px solid $c-contrast;
   padding: 10px;
-  background: var(--background);
+  background: $c-background;
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 36px;

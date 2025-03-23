@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './About.module.css'
+import styles from './About.module.scss'
 import { useRef, useEffect } from 'react'
 import packageJSON from '../../../package.json'
 

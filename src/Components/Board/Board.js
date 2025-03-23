@@ -1,4 +1,4 @@
-import './Board.css'
+import './Board.scss'
 import PropTypes from 'prop-types'
 
 function Board(props){

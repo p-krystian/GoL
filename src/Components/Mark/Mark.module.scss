@@ -1,3 +1,5 @@
+@import '../../Styles/variables';
+
 .mark{
   display: block;
   position: fixed;
@@ -8,7 +10,7 @@
   font-size: 16px;
 }
 .mark a{
-  color: var(--contrast);
+  color: $c-contrast;
   text-decoration: none;
 }
 .mark a:hover,
@@ -16,7 +18,7 @@
   text-decoration: underline;
 }
 .mark a:focus-visible{
-  outline: 0.1em solid var(--rgb-second);
+  outline: 0.1em solid $c-rgb-second;
 }
 @media only screen and (max-width: 600px){
   .mark{

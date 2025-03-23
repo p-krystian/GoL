@@ -1,3 +1,5 @@
+@import '../../Styles/variables';
+
 .cell{
   appearance: none;
   width: var(--size, 24px);
@@ -5,12 +7,12 @@
   border: none;
   border-radius: calc(var(--size, 24px)/8);
   cursor: pointer;
-  background: var(--foreground);
+  background: $c-foreground;
   margin: 1px;
 }
 .cell.alive{
-  background: var(--contrast);
+  background: $c-contrast;
 }
 .cell:focus-visible{
-  outline: 0.1em solid var(--rgb-second);
+  outline: 0.1em solid $c-rgb-second;
 }

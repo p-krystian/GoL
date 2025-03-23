@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import './Cell.css'
+import './Cell.scss'
 
 function Cell(props){
   const { alive, click, size } = props

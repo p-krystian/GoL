@@ -1,32 +1,32 @@
+@import '../../Styles/variables';
+@import '../../Styles/mixins';
+
 .header{
-  display: flex;
+  @include centered-flex(column);
   cursor: default;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: var(--foreground);
+  color: $c-foreground;
   text-transform: uppercase;
   font-size: 80px;
   font-family: 'Open Sans', sans-serif;
   font-weight: 800;
   line-height: 1;
-  -webkit-text-stroke: 2px var(--contrast);
+  -webkit-text-stroke: 2px $c-contrast;
   text-align: center;
   text-shadow:
-    -4px 4px 1px var(--rgb-first),
-    -8px 8px 0 var(--rgb-second);
+    -4px 4px 1px $c-rgb-first,
+    -8px 8px 0 $c-rgb-second;
   transition: text-shadow 0.2s ease-in-out;
   user-select: none;
 }
 .header:hover,
 .header:focus-visible{
   text-shadow:
-    -3px 3px 1px var(--rgb-first),
-    -6px 6px 0 var(--rgb-second);
+    -3px 3px 1px $c-rgb-first,
+    -6px 6px 0 $c-rgb-second;
 }
 .active{
   cursor: pointer;
 }
 .active:focus-visible{
-  outline: 0.02em solid var(--rgb-second);
+  outline: 0.02em solid $c-rgb-second;
 }

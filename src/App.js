@@ -1,4 +1,4 @@
-import './App.css'
+import './App.scss'
 import Mark from './Components/Mark/Mark'
 import Main from './Screens/Main/Main'
 import Start from './Screens/Start/Start'

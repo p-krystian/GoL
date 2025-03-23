@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types'
-import styles from './Settings.module.css'
+import styles from './Settings.module.scss'
 
 function Settings(props){
   const {current, update} = props

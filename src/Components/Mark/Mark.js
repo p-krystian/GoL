@@ -1,4 +1,4 @@
-import styles from './Mark.module.css'
+import styles from './Mark.module.scss'
 
 function Mark(){
   return (
