@@ -3,6 +3,8 @@
   z-index: 5;
   left: 0;
   top: 0;
+  bootom: 0;
+  right: 0;
   width: 100%;
   min-height: 100vh;
   display: flex;

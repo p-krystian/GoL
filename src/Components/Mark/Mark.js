@@ -1,15 +1,13 @@
-import PropTypes from 'prop-types'
 import styles from './Mark.module.css'
 
-function Mark({ children }){
+function Mark(){
   return (
     <div className={ styles.mark }>
-      { children }
+      by <a href="http://krystian.zalana.eu" target="_blank" rel="noreferrer">
+        Krystian Piątek
+      </a>
     </div>
   )
-}
-Mark.propTypes = {
-  children: PropTypes.any.isRequired
 }
 
 export default Mark

@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types'
 import styles from './About.module.css'
 import { useRef, useEffect } from 'react'
+import packageJSON from '../../../package.json'
 
-function About(props){
-  const { ver, developer, back } = props
+function About({ back }){
   const wrapper = useRef(null)
 
   // eslint-disable-next-line
@@ -21,12 +21,9 @@ function About(props){
     <div
       className={ styles.wrapper }
       ref={ wrapper }
-      onClick={ e => {
-        if (e.target === wrapper.current)
-          back()
-      }}
+      onClick={ e => e.target === wrapper.current ? back() : null }
     >
-        <div className={ styles.window }>
+      <div className={ styles.window }>
         <center><p>Game of Life</p></center>
         <br />
         <p>It is an implement of cellular</p>
@@ -34,14 +31,14 @@ function About(props){
         <p>Select live cells and click</p>
         <p>START to start life simulation.</p>
         <br />
-        <center><p>v{ ver } - by { developer }</p></center>
+        <center>
+          <p>v{ packageJSON.version } - by { packageJSON.author }</p>
+        </center>
       </div>
     </div>
   )
 }
 About.propTypes = {
-  ver: PropTypes.string.isRequired,
-  developer: PropTypes.string.isRequired,
   back: PropTypes.func.isRequired
 }
 
