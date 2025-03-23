@@ -6,16 +6,14 @@ import packageJSON from '../../../package.json'
 function About({ back }){
   const wrapper = useRef(null)
 
-  // eslint-disable-next-line
-  function keyExit(keyup){
-    if (['Escape', 'Backspace'].includes(keyup.key))
-      back()
-  }
-
   useEffect(() => {
+    const keyExit = keyup => (
+      ['Escape', 'Backspace'].includes(keyup.key) ? back() : null
+    )
+
     document.body.addEventListener('keyup', keyExit)
     return () => document.body.removeEventListener('keyup', keyExit)
-  }, [keyExit])
+  }, [back])
 
   return (
     <div

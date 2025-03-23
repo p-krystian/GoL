@@ -27,6 +27,7 @@ function Main({ back }){
     h: Math.round(board.current.offsetHeight / (size.s+2)) - 1,
     s: size.s
   })
+
   function clearSettings(){
     setSize(defaultSize)
     setDelay(defaultDelay)
@@ -37,21 +38,22 @@ function Main({ back }){
     setTable(toggleLife([{y, x}], table))
   }
 
-  useEffect(() => {
-    if (!running){
+  function startRunning(run){
+    setRunning(run)
+
+    if (!run){
       runningCycle = clearInterval(runningCycle)
       return
     }
     runningCycle = setInterval(() => (
       setTable(
         toggleLife(
-          cycle(table, () => setRunning(false)),
+          cycle(table, () => startRunning(false)),
           table
         )
       )
     ), delay)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [running])
+  }
 
   useEffect(() => (
     setTable(cleanTable(size))
@@ -98,10 +100,10 @@ function Main({ back }){
           <Button click={ clearSettings }>reset</Button>
         </>) : (
           running ? (
-            <Button click={ () => setRunning(false) }>stop</Button>
+            <Button click={ () => startRunning(false) }>stop</Button>
           ) : (<>
             <Button click={ () => setTable(cleanTable(size)) }>clear</Button>
-            <Button click={ () => setRunning(true) }>start</Button>
+            <Button click={ () => startRunning(true) }>start</Button>
             <Button click={ () => setSettings(true) }>settings</Button>
           </>)
         )

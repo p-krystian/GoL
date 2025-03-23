@@ -4,25 +4,24 @@ import {useRef, useEffect} from 'react'
 
 function Header(props){
   const { vertical, click } = props
-  const header = useRef(null)
-
-  // eslint-disable-next-line
-  function keyClick(keyup){
-    if (['Enter', 'Space', ' '].includes(keyup.key))
-      click && click()
-  }
+  const headerRef = useRef(null)
 
   useEffect(() => {
-    header.current.addEventListener('keyup', keyClick)
-  }, [keyClick, header])
+    const header = headerRef.current
+    const keyClick = keyup => (
+      ['Enter', 'Space', ' '].includes(keyup.key) ? click() : null
+    )
 
+    header.addEventListener('keyup', keyClick)
+    return () => header.removeEventListener('keyup', keyClick)
+  }, [headerRef, click])
 
   return (
     <div
       className={ `${styles.header} ${click ? styles.active : ''}` }
       onClick={ click }
       tabIndex={ click ? 0 : -1 }
-      ref={ header }
+      ref={ headerRef }
     >{
       vertical ? (<>
         <span>Game</span>
