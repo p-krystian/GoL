@@ -1,18 +1,21 @@
 @import '../../Styles/variables';
 
+$size: var(--size, 24px);
+
 .cell{
   appearance: none;
-  width: var(--size, 24px);
-  height: var(--size, 24px);
+  width: $size;
+  height: $size;
   border: none;
-  border-radius: calc(var(--size, 24px)/8);
+  border-radius: calc($size/8);
   cursor: pointer;
   background: $c-foreground;
   margin: 1px;
-}
-.cell.alive{
-  background: $c-contrast;
-}
-.cell:focus-visible{
-  outline: 0.1em solid $c-rgb-second;
+
+  &.alive{
+    background: $c-contrast;
+  }
+  &:focus-visible{
+    outline: 0.1em solid $c-rgb-second;
+  }
 }

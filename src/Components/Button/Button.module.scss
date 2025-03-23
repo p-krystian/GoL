@@ -16,14 +16,14 @@
     0 0 1px $c-rgb-first,
     0 0 0 $c-rgb-second;
   transition: text-shadow 0.15s ease-in-out;
-}
-.btn:hover,
-.btn:focus-visible{
-  outline: none;
-  text-shadow:
-    -1px 1px 1px $c-rgb-first,
-    -2px 2px 0 $c-rgb-second;
-}
-.btn:focus-visible{
-  border-color: $c-rgb-second;
+
+  &:hover, &:focus-visible{
+    outline: none;
+    text-shadow:
+      -1px 1px 1px $c-rgb-first,
+      -2px 2px 0 $c-rgb-second;
+  }
+  &:focus-visible{
+    border-color: $c-rgb-second;
+  }
 }

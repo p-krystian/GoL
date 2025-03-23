@@ -7,21 +7,23 @@
   font-family: 'Open Sans', sans-serif;
   font-size: 28px;
   align-items: center;
-}
-.settings input{
-  background: $c-foreground;
-  color: $c-contrast;
-  text-align: center;
-  font-size: 24px;
-  font-family: 'Open Sans', sans-serif;
-  border: 2px solid $c-contrast;
-  padding: 4px;
-  width: 120px;
-  cursor: text;
-}
-.settings input:focus{
-  outline: none;
-  box-shadow:
-    -2px 2px 0 0 $c-rgb-first,
-    -4px 4px 0 0 $c-rgb-second;
+
+  input{
+    background: $c-foreground;
+    color: $c-contrast;
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    border: 2px solid $c-contrast;
+    padding: 4px;
+    width: 120px;
+    cursor: text;
+
+    &:focus{
+      outline: none;
+      box-shadow:
+        -2px 2px 0 0 $c-rgb-first,
+        -4px 4px 0 0 $c-rgb-second;
+    }
+  }
 }

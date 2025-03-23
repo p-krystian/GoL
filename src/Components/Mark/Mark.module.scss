@@ -8,17 +8,20 @@
   font-family: 'Open Sans', sans-serif;
   color: black;
   font-size: 16px;
-}
-.mark a{
-  color: $c-contrast;
-  text-decoration: none;
-}
-.mark a:hover,
-.mark a:focus-visible{
-  text-decoration: underline;
-}
-.mark a:focus-visible{
-  outline: 0.1em solid $c-rgb-second;
+
+  a{
+    color: $c-contrast;
+    text-decoration: none;
+
+    &:hover,
+    &:focus-visible{
+      text-decoration: underline;
+    }
+     &:focus-visible{
+      outline: 0.1em solid $c-rgb-second;
+    }
+  }
+
 }
 @media only screen and (max-width: 600px){
   .mark{

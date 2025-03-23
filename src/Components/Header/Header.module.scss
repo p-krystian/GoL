@@ -17,16 +17,19 @@
     -8px 8px 0 $c-rgb-second;
   transition: text-shadow 0.2s ease-in-out;
   user-select: none;
+
+  &:hover,
+  &:focus-visible{
+    text-shadow:
+      -3px 3px 1px $c-rgb-first,
+      -6px 6px 0 $c-rgb-second;
+  }
 }
-.header:hover,
-.header:focus-visible{
-  text-shadow:
-    -3px 3px 1px $c-rgb-first,
-    -6px 6px 0 $c-rgb-second;
-}
+
 .active{
   cursor: pointer;
-}
-.active:focus-visible{
-  outline: 0.02em solid $c-rgb-second;
+
+  &:focus-visible{
+    outline: 0.02em solid $c-rgb-second;
+  }
 }

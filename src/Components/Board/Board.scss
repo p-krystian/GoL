@@ -10,14 +10,16 @@
   border: 2px solid $c-contrast;
   background: $c-background;
   overflow: auto;
+
+  .row{
+    display: flex;
+  }
+  &.running .cell{
+    cursor: default;
+    pointer-events: none;
+  }
 }
-.board .row{
-  display: flex;
-}
-.board.running .cell{
-  cursor: default;
-  pointer-events: none;
-}
+
 @media only screen and (max-width: 600px){
   .board{
     min-width: 300px;
