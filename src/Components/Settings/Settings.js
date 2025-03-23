@@ -60,8 +60,8 @@ function Settings(props){
         <span>Delay:</span>
         <input
           type="number"
-          min="1"
-          step="1"
+          min="100"
+          step="50"
           value={ current.delay }
           onChange={ e => update.delay(+e.target.value) }
         />
