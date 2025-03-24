@@ -1,0 +1,58 @@
+name: Build and release project
+on:
+  push:
+    tags:
+      - 'v[0-9]+.[0-9]+.*'
+jobs:
+
+  build:
+    name: Build project
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Install NPM dependencies
+        run: npm install --omit=dev
+      - name: Build assets
+        run: npm run build
+      - name: Upload built content
+        uses: actions/upload-artifact@v4
+        with:
+          name: built-files
+          path: build/
+
+  release:
+    name: Release project
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Download built content
+        uses: actions/download-artifact@v4
+        with:
+          name: built-files
+          path: built-files
+      - name: Print downloaded content
+        run: ls -R
+      - name: Archive built content
+        uses: thedoctor0/zip-release@0.7.5
+        with:
+          type: 'zip'
+          filename: 'release.zip'
+          directory: 'built-files'
+      - name: Create GitHub release
+        id: create-gh-release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ github.ref_name }}
+          release_name: Release ${{ github.ref_name }}
+      - name: Upload release asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create-gh-release.outputs.upload_url }}
+          asset_path: ./release.zip
+          asset_name: GameOfLife-${{ github.ref_name }}.zip
+          asset_content_type: application/zip
