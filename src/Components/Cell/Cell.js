@@ -2,10 +2,10 @@ import PropTypes from 'prop-types'
 import './Cell.scss'
 
 function Cell(props){
-  const { alive, click, size } = props
+  const { alive, click, size, margin } = props
   return(
     <button
-      style={ {"--size": `${size}px`} }
+      style={ {"--size": `${size}px`, "--margin": `${margin}px`} }
       className={ `cell ${alive ? 'alive' : 'dead'}` }
       onClick={ click }
     >

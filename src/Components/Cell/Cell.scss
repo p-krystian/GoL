@@ -1,6 +1,7 @@
 @import '../../Styles/variables';
 
 $size: var(--size, 24px);
+$margin: var(--margin, 1px);
 
 .cell{
   appearance: none;
@@ -10,7 +11,7 @@ $size: var(--size, 24px);
   border-radius: calc($size/8);
   cursor: pointer;
   background: $c-foreground;
-  margin: 1px;
+  margin: $margin;
 
   &.alive{
     background: $c-contrast;

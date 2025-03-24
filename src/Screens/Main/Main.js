@@ -14,6 +14,10 @@ const defaultDelay = 500
 const defaultSize = {w: 0, h: 0, s: 24}
 let runningCycle
 
+const margin = s => (
+  Math.max(Math.min(0.06 * s - 0.43), 0.5)
+)
+
 function Main({ back }){
   const [size, setSize] = useState(defaultSize)
   const [delay, setDelay] = useState(defaultDelay)
@@ -23,8 +27,12 @@ function Main({ back }){
 
   const board = useRef(null);
   const filledBoard = () => ({
-    w: Math.round(board.current.offsetWidth / (size.s+2)) - 1,
-    h: Math.round(board.current.offsetHeight / (size.s+2)) - 1,
+    w: Math.round(
+      board.current.offsetWidth / (margin(size.s) * 2 + size.s)
+    ) - 1,
+    h: Math.round(
+      board.current.offsetHeight / (margin(size.s) * 2 + size.s)
+    ) - 1,
     s: size.s
   })
 
@@ -86,6 +94,7 @@ function Main({ back }){
                   alive={ cell }
                   click={ () => cellClick(x, y) }
                   size={ size.s }
+                  margin={ margin(size.s) }
                   key={ `c${y}-${x}` }
                 />
               ))
