@@ -1,4 +1,4 @@
-import aliveNeighbors from '../aliveNeighbors/aliveNeighbors'
+import aliveNeighbors from './aliveNeighbors'
 
 function cycle(table, stop){
   const toUpdate = []

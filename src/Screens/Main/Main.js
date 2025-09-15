@@ -6,9 +6,9 @@ import Cell from '../../Components/Cell/Cell'
 import Button from '../../Components/Button/Button'
 import Settings from '../../Components/Settings/Settings'
 import { useState, useEffect, useRef } from 'react'
-import cycle from '../../Utils/cycle/cycle'
-import toggleLife from '../../Utils/toggleLife/toggleLife'
-import cleanTable from '../../Utils/cleanTable/cleanTable'
+import cycle from '../../Utils/cycle'
+import toggleLife from '../../Utils/toggleLife'
+import cleanTable from '../../Utils/cleanTable'
 
 const defaultDelay = 500
 const defaultSize = {w: 0, h: 0, s: 24}
