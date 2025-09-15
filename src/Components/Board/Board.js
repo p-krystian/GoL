@@ -1,24 +1,24 @@
 import './Board.scss'
 import PropTypes from 'prop-types'
+import { forwardRef } from 'react'
 
-function Board(props){
-  const { children, running, hook } = props
+const Board = forwardRef((props, ref) => {
+  const { children, running } = props
   return (
     <div
-      className={`board ${running ? 'running' : ''}`}
-      ref={ hook }
+      className={ `board ${running ? 'running' : ''}` }
+      ref={ ref }
     >
       { children }
     </div>
   )
-}
+})
+
+Board.displayName = 'Board'
+
 Board.propTypes = {
   children: PropTypes.element,
   running: PropTypes.bool,
-  hook: PropTypes.oneOfType([
-    PropTypes.func,
-    PropTypes.shape({ current: PropTypes.instanceOf(Element) })
-  ])
 }
 
 export default Board

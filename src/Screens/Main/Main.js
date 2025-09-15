@@ -22,7 +22,7 @@ function Main({ back }){
   const [size, setSize] = useState(defaultSize)
   const [delay, setDelay] = useState(defaultDelay)
   const [table, setTable] = useState( [[]] )
-  const [running, setRunning]  = useState(false)
+  const [running, setRunning] = useState(false)
   const [settings, setSettings] = useState(false)
 
   const board = useRef(null);
@@ -80,7 +80,7 @@ function Main({ back }){
   return (
     <div className={ styles.main }>
       <Header click={ back }/>
-      <Board running={ running } hook={ board }>{
+      <Board running={ running } ref={ board }>{
         settings ? (
           <Settings
             current={ {size: size, delay: delay} }
