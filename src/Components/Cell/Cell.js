@@ -18,7 +18,8 @@ Cell.propTypes = {
     PropTypes.number
   ]),
   click: PropTypes.func,
-  size: PropTypes.number
+  size: PropTypes.number,
+  margin: PropTypes.number
 }
 
 export default Cell
