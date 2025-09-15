@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types'
 import './Cell.scss'
+import { memo } from 'react'
 
 function Cell(props){
   const { alive, click, size, margin } = props
@@ -8,6 +9,8 @@ function Cell(props){
       style={ {"--size": `${size}px`, "--margin": `${margin}px`} }
       className={ `cell ${alive ? 'alive' : 'dead'}` }
       onClick={ click }
+      aria-label={ `Cell ${alive ? 'alive' : 'dead'}` }
+      aria-pressed={ alive }
     >
     </button>
   )
@@ -22,4 +25,4 @@ Cell.propTypes = {
   margin: PropTypes.number
 }
 
-export default Cell
+export default memo(Cell)
