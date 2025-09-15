@@ -5,7 +5,7 @@ import Board from '../../Components/Board/Board'
 import Cell from '../../Components/Cell/Cell'
 import Button from '../../Components/Button/Button'
 import Settings from '../../Components/Settings/Settings'
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import cycle from '../../Utils/cycle'
 import toggleLife from '../../Utils/toggleLife'
 import cleanTable from '../../Utils/cleanTable'
@@ -26,7 +26,7 @@ function Main({ back }){
   const [settings, setSettings] = useState(false)
 
   const board = useRef(null);
-  const filledBoard = () => ({
+  const filledBoard = useCallback(() => ({
     w: Math.round(
       board.current.offsetWidth / (margin(size.s) * 2 + size.s)
     ) - 1,
@@ -34,7 +34,7 @@ function Main({ back }){
       board.current.offsetHeight / (margin(size.s) * 2 + size.s)
     ) - 1,
     s: size.s
-  })
+  }), [size.s])
 
   function clearSettings(){
     setSize(defaultSize)
@@ -74,6 +74,10 @@ function Main({ back }){
     setSize(defaultSize)
     setTable(cleanTable(defaultSize))
     board.current.scrollIntoView(true)
+
+    return () => {
+      clearInterval(runningCycle)
+    }
     // eslint-disable-next-line
   }, [])
 
